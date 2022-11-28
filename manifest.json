@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Fill Req Fields",
+    "version": "1.0",
+    "description": "Filsl in all required fields",
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "permissions": [
+    "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "icons/porcupine2.png",
+        "default_title": "Fill",
+        "default_popup": "popup/fill.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.com/*"],
+            "js": ["filler.js"]
+        }
+    ]
+}
